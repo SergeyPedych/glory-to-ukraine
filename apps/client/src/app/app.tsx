@@ -1,8 +1,22 @@
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import styles from './app.module.scss';
 import NxWelcome from './nx-welcome';
-
 import { Route, Routes, Link } from 'react-router-dom';
+import { IUser } from '@glory-to-ukraine/interfaces';
+const user = {
+  id: 'test',
+  address1: 'test',
+  address2: 'test',
+  birthday: 'test',
+  city: 'test',
+  country: 'test',
+  createdAt: new Date(),
+  email: 'test',
+  firstName: 'test',
+  postalCode: 'test',
+  region: 'test',
+  state: null
+} as IUser;
 
 export function App() {
   return (
@@ -40,7 +54,7 @@ export function App() {
           path="/page-2"
           element={
             <div>
-              <Link to="/">Click here to go back to root page.</Link>
+              <Link to="/">{user.id}</Link>
             </div>
           }
         />
